@@ -18,7 +18,7 @@ start_sequence = "\nA:"
 restart_sequence = "\n\nQ: "
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'sdjflkdsbnkjereTkadsjfab'
+app.config['SECRET_KEY'] = os.environ.get('WTF_SECRET_KEY')
 Bootstrap(app)
 
 class QuestionForm(FlaskForm):
